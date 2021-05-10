@@ -65,8 +65,8 @@ class BiasDetector extends Component {
 
             else {
                 // currentComponent.setState({resultBias:  cnnbias}); 
-                currentComponent.setState({resultBias:  foxbias});                 
-                currentComponent.setState({resultImg: <img src={require('../images/foxwc.jpg' )}  width="400" height="400" alt="Logo" />});
+                currentComponent.setState({resultBias:  cnnbias});                 
+                currentComponent.setState({resultImg: <img src={require('../images/cnnwc.png' )}  width="400" height="400" alt="Logo" />});
                 currentComponent.setState({resultSentimentMessage: ">>> Sentiment analyzed!"});
                 currentComponent.setState({resultSentiment: data.Sentiment});
                 // currentComponent.setState({resultSentimentScore: JSON.stringify(data.SentimentScore)});
@@ -186,18 +186,14 @@ class BiasDetector extends Component {
                 </div>
                 <div class="titlebar"></div> 
                 <div className="row text-left">
-                {/* <p><a href="https://aws.amazon.com/comprehend/" target="_blank" rel="noopener noreferrer">Amazon Comprehend</a> uses natural language processing (NLP) to extract insights about the content of documents. Amazon Comprehend processes any text file in UTF-8 format. It develops insights by recognizing the entities, key phrases, language, sentiments, PII (personally identifiable information), and other common elements in a document. Use Amazon Comprehend to create new products based on understanding the structure of documents. For example, using Amazon Comprehend you can search social networking feeds for mentions of products or scan an entire document repository for key phrases.</p> */}
-                <p>In this example, we're going to show how easy to send text to <code>Bias Detector</code> to perform a political bias analysis and assessment !</p>
-                {/* <p>
-                  <b>Methods:</b>
-                    <br></br>
-                  <code>sendTextToComprehend()</code>: Send text to Comprehend, returning all relevant results in the response body.<br></br>
-                    <li><code><a href="https://docs.aws.amazon.com/comprehend/latest/dg/get-started-api-sentiment.html" target="_blank" rel="noopener noreferrer">detectSentiment()</a></code></li>
-                    <li><code><a href="https://docs.aws.amazon.com/comprehend/latest/dg/get-started-api-entities.html" target="_blank" rel="noopener noreferrer">detectEntities()</a></code></li>
-                    <li><code><a href="https://docs.aws.amazon.com/comprehend/latest/dg/get-started-api-key-phrases.html" target="_blank" rel="noopener noreferrer">detectKeyPhrases()</a></code></li>
-                    <li><code><a href="https://docs.aws.amazon.com/comprehend/latest/dg/get-started-api-syntax.html" target="_blank" rel="noopener noreferrer">detectSyntax()</a></code></li>
-                    <li><code><a href="https://docs.aws.amazon.com/comprehend/latest/dg/get-started-api-pii.html" target="_blank" rel="noopener noreferrer">containsPiiEntities(), detectPiiEntities()</a></code></li>
-                </p> */}
+                <p>In this example, we're going to show how to send text to <code>Bias Detector</code> to perform a political bias analysis and assessment !</p>
+                <p> </p>
+                <p>  Please copy this text: </p>
+                <p>"California Republican gubernatorial candidate Caitlyn Jenner said she favors granting a path to citizenship to the 1.75 million undocumented immigrants in the state's labor force, staking out a position that is more progressive than many voters in the GOP base nationally and at odds with former President Donald Trump, who Jenner supported until 2018.
+In an interview with CNN's Dana Bash that will air on "Anderson Cooper 360" at 8 p.m. ET Monday night, Jenner said that she decided to challenge California Gov. Gavin Newsom in the all-but-certain recall election after watching the crisis that has unfolded at the southern border where the Biden administration has been struggling to halt a surge in immigrants from South and Central America, many of them children.
+"</p>
+
+                
               </div>
               <div className="row">
                 <div className="col-md-6 text-left">
@@ -219,15 +215,9 @@ class BiasDetector extends Component {
                    <p> </p>
                     <h4 className="card-title">Political Leaning:</h4>
                     
-                    {/* <p>Overall : Left/<code> NEUTRAL </code>/Right</p> */}
-                    <p>Overall : LEFT/NEUTRAL<code>/RIGHT</code></p>
-                    {/* <h5 className="card-title">Sentiment:</h5>
-                       <div>
-                       <p>Overall : {sentiment}</p>
-                       <p>Positive : {sentimentScorePos} </p>
-                       <p>Negative : {sentimentScoreNeg} </p>
-                       <p>Neutral : {sentimentScoreNeu} </p>
-                       </div> */}
+                    <p>Overall : Left/<code> NEUTRAL </code>/Right</p>
+                    {/* <p>Overall : LEFT/NEUTRAL<code>/RIGHT</code></p> */}
+                    
                     </div>
                   </div>
                 </div>
@@ -300,7 +290,7 @@ class BiasDetector extends Component {
                           <input hidden type="checkbox" id="chck4"/>
                           <label class="tab-label" htmlFor="chck4">Syntax Tokens</label>
                           <div class="tab-content">
-                            {/* {syntax} */}
+                            {syntax}
                           </div>
                         </div>
                         <div class="tab">
