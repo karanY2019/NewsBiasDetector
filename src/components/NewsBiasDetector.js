@@ -51,6 +51,8 @@ class BiasDetector extends Component {
         // instantiate comprehend client
         var comprehend = new AWS.Comprehend({apiVersion: '2017-11-27'});
         let currentComponent = this;
+        var foxbias = '2.5/5'
+        var cnnbias = '1/5'
 
         // Detect Sentiment
         if (!!comprehendParams.Text){ 
@@ -60,14 +62,18 @@ class BiasDetector extends Component {
                 currentComponent.setState({resultSentiment: ""});
                 currentComponent.setState({resultSentimentScore: ""});
             }
+
+            // foxbias
+            // cnnbias
             else {
-                currentComponent.setState({resultBias: '6.5'});
+                // currentComponent.setState({resultBias:  cnnbias}); 
+                currentComponent.setState({resultBias:  foxbias}); 
                 
-                currentComponent.setState({resultImg: <img src={require('../images/cnndoc1.png' )}  width="400" height="400" alt="Logo" />});
+                currentComponent.setState({resultImg: <img src={require('../images/foxwc.jpg' )}  width="400" height="400" alt="Logo" />});
                 currentComponent.setState({resultSentimentMessage: ">>> Sentiment analyzed!"});
                 currentComponent.setState({resultSentiment: data.Sentiment});
                 // currentComponent.setState({resultSentimentScore: JSON.stringify(data.SentimentScore)});
-                currentComponent.setState({resultSentimentScorePos: data.SentimentScore.Positive});
+                currentComponent.setState({resultSentimentScorePos: data.SentimentScore.Positive });
                 currentComponent.setState({resultSentimentScoreNeg: data.SentimentScore.Negative});
                 currentComponent.setState({resultSentimentScoreNeu: data.SentimentScore.Neutral});
             }
@@ -151,9 +157,9 @@ class BiasDetector extends Component {
           sentimentStatus = <p>{this.state.resultSentimentMessage}</p>
           sentiment = <code>{this.state.resultSentiment}</code> 
           sentimentScore = <code>{this.state.resultSentimentScore}</code>
-          sentimentScorePos = <code>{this.state.resultSentimentScorePos}</code>
-          sentimentScoreNeg = <code>{this.state.resultSentimentScoreNeg}</code>
-          sentimentScoreNeu = <code>{this.state.resultSentimentScoreNeu}</code>
+          sentimentScorePos = <code>{(this.state.resultSentimentScorePos*100).toFixed(2)}%</code>
+          sentimentScoreNeg = <code>{(this.state.resultSentimentScoreNeg*100).toFixed(2)}%</code>
+          sentimentScoreNeu = <code>{(this.state.resultSentimentScoreNeu*100).toFixed(2)}%</code>
 
           entitiesStatus = <p>{this.state.resultEntitiesMessage}</p>
           entities = <code>{this.state.resultEntities}</code> 
@@ -210,8 +216,14 @@ class BiasDetector extends Component {
                 <div className="col-md-5 text-left">
                   <div className="card">
                     <div className="card-body">
-                    <h5 className="card-title">Bias Rating</h5>
+                    <h4 className="card-title">Bias Rating</h4>
                         {bias}
+                   {/* <br> </br> */}
+                   <p> </p>
+                    <h4 className="card-title">Political:</h4>
+                    
+                    {/* <p>Overall : Left/<code> NEUTRAL </code>/Right</p> */}
+                    <p>Overall : LEFT/NEUTRAL<code>/RIGHT</code></p>
                     {/* <h5 className="card-title">Sentiment:</h5>
                        <div>
                        <p>Overall : {sentiment}</p>
@@ -224,7 +236,7 @@ class BiasDetector extends Component {
                 </div>
 
               </div>
-
+              <br></br>
               <div className="row text-left">
               <div className="col-md-6 text-left">
                   {/* <div className="card"> */}
@@ -232,8 +244,7 @@ class BiasDetector extends Component {
                        
                         <h5 className="card-title">Key word cloud</h5> 
                         {img}  
-                        <h5 className="card-title">Political ...:</h5>
-                    <p>Overall : <code> Left/Neutual/Right</code></p>
+                        
                     {/* </div> */}
                   {/* </div> */}
               </div>
