@@ -70,7 +70,7 @@ class Main extends Component {
                                     </div>
                                     <p className="card-text">Amazon Comprehend is a natural language processing (NLP) service that uses machine learning to find insights and relationships in text. No machine learning experience required.</p>
                                     <br></br>
-                                    <a href="/comprehend" className="btn btn-info">Try Comprehend</a>
+                                    <a href="/NewsBiasDetector" className="btn btn-info">Try Comprehend</a>
                                     <a href="https://docs.aws.amazon.com/comprehend/latest/dg/what-is.html" target="_blank" rel="noopener noreferrer" className="btn btn-info">Docs</a>
                                 </div>
                             </div>
