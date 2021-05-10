@@ -17,7 +17,7 @@ class Main extends Component {
                                 </a>
                             </div>
                             <div className="col-xs-4 offset-1">
-                                    <h1>AWS AI Service Demos</h1>
+                                    <h1>Bias Detector Demo</h1>
                                     <p>
                                         AWS pre-trained AI Services provide ready-made intelligence for your applications and workflows.
                                         <br></br>
