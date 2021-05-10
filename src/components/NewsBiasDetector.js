@@ -63,13 +63,10 @@ class BiasDetector extends Component {
                 currentComponent.setState({resultSentimentScore: ""});
             }
 
-            // foxbias
-            // cnnbias
             else {
                 // currentComponent.setState({resultBias:  cnnbias}); 
-                currentComponent.setState({resultBias:  foxbias}); 
-                
-                currentComponent.setState({resultImg: <img src={require('../images/foxwc.jpg' )}  width="400" height="400" alt="Logo" />});
+                currentComponent.setState({resultBias:  cnnbias});                 
+                currentComponent.setState({resultImg: <img src={require('../images/cnnwc.png' )}  width="400" height="400" alt="Logo" />});
                 currentComponent.setState({resultSentimentMessage: ">>> Sentiment analyzed!"});
                 currentComponent.setState({resultSentiment: data.Sentiment});
                 // currentComponent.setState({resultSentimentScore: JSON.stringify(data.SentimentScore)});
@@ -220,10 +217,10 @@ class BiasDetector extends Component {
                         {bias}
                    {/* <br> </br> */}
                    <p> </p>
-                    <h4 className="card-title">Political:</h4>
+                    <h4 className="card-title">Political Leaning:</h4>
                     
-                    {/* <p>Overall : Left/<code> NEUTRAL </code>/Right</p> */}
-                    <p>Overall : LEFT/NEUTRAL<code>/RIGHT</code></p>
+                    <p>Overall : Left/<code> NEUTRAL </code>/Right</p>
+                    {/* <p>Overall : LEFT/NEUTRAL<code>/RIGHT</code></p> */}
                     {/* <h5 className="card-title">Sentiment:</h5>
                        <div>
                        <p>Overall : {sentiment}</p>
