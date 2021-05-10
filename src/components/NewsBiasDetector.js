@@ -187,7 +187,7 @@ class BiasDetector extends Component {
                 <div class="titlebar"></div> 
                 <div className="row text-left">
                 {/* <p><a href="https://aws.amazon.com/comprehend/" target="_blank" rel="noopener noreferrer">Amazon Comprehend</a> uses natural language processing (NLP) to extract insights about the content of documents. Amazon Comprehend processes any text file in UTF-8 format. It develops insights by recognizing the entities, key phrases, language, sentiments, PII (personally identifiable information), and other common elements in a document. Use Amazon Comprehend to create new products based on understanding the structure of documents. For example, using Amazon Comprehend you can search social networking feeds for mentions of products or scan an entire document repository for key phrases.</p> */}
-                <p>In this example, we're going to show how easy it is to send text to <code>Bias Detector</code> to understand text sentiment, identify entities and key phrases, and assess syntax tokens.</p>
+                <p>In this example, we're going to show how easy to send text to <code>Bias Detector</code> to perform a political bias analysis and assessment !</p>
                 {/* <p>
                   <b>Methods:</b>
                     <br></br>
