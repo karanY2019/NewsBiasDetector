@@ -297,21 +297,21 @@ In an interview with CNN's Dana Bash that will air on "Anderson Cooper 360" at 8
                           <input hidden type="checkbox" id="chck4"/>
                           <label class="tab-label" htmlFor="chck4">Syntax Tokens</label>
                           <div class="tab-content">
-                            {syntax}
+                            {/* {syntax} */}
                           </div>
                         </div>
                         <div class="tab">
                           <input hidden type="checkbox" id="chck5"/>
                           <label class="tab-label" htmlFor="chck5">PII Types in Passage</label>
                           <div class="tab-content">
-                            {/* {piiEntityLabels} */}
+                            {piiEntityLabels}
                           </div>
                         </div>
                         <div class="tab">
                           <input hidden type="checkbox" id="chck6"/>
                           <label class="tab-label" htmlFor="chck6">Detect PII Entities</label>
                           <div class="tab-content">
-                            {/* {piiEntities} */}
+                            {piiEntities}
                           </div>
                         </div>
                       </div>
