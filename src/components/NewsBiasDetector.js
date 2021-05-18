@@ -229,7 +229,14 @@ In an interview with CNN's Dana Bash that will air on "Anderson Cooper 360" at 8
                   {/* <div className="card"> */}
                     {/* <div className="card-body"> */}
                        
-                        <h5 className="card-title">Key word cloud</h5> 
+                        {/* <h5 className="card-title">Key word cloud</h5>  */}
+                        <h5 className="card-title">
+                        <button type="button" className="btn btn-info">
+                        <a href="https://www.wordclouds.com/" target="_blank" rel="noopener noreferrer">Generate word cloud </a> 
+                        </button>
+                        </h5>
+                        {/* <button type="button" className="btn btn-info" onClick={<a href= "https://www.wordclouds.com/" target="_blank" rel="noopener noreferrer"></a>}>Generate</button> */}
+
                         {img}  
                         
                     {/* </div> */}
@@ -276,7 +283,7 @@ In an interview with CNN's Dana Bash that will air on "Anderson Cooper 360" at 8
                           <input hidden type="checkbox" id="chck2"/>
                           <label class="tab-label" htmlFor="chck2">Entities</label>
                           <div class="tab-content">
-                            {/* {entities} */}
+                            {entities}
                           </div>
                         </div>
                         <div class="tab">
